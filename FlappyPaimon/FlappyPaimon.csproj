@@ -184,10 +184,13 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Model\CollidableItem.cs" />
     <Compile Include="Model\FlappyPaimonModel.cs" />
     <Compile Include="Model\Gem.cs" />
+    <Compile Include="Model\Item.cs" />
     <Compile Include="Model\Pipe.cs" />
     <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\Slime.cs" />
     <Compile Include="ViewModel\FlappyPaimonViewModel.cs" />
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

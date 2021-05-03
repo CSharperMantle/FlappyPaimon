@@ -5,10 +5,14 @@
                  xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
                  xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
                  xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
-                 xmlns:local="clr-namespace:FlappyPaimon"
+                 xmlns:local="clr-namespace:FlappyPaimon.View"
+                 xmlns:viewModel="clr-namespace:FlappyPaimon.ViewModel"
                  mc:Ignorable="d"
-                 Title="FlappyPaimon" Height="600" Width="800"
+                 Title="FlappyPaimon" Height="600" Width="800" ResizeMode="NoResize"
                  MinHeight="420" MinWidth="560">
+    <Window.Resources>
+        <viewModel:FlappyPaimonViewModel x:Key="ViewModel"/>
+    </Window.Resources>
     <mah:MetroWindow.RightWindowCommands>
         <mah:WindowCommands>
             <Button Click="LaunchGitHubRepo"
@@ -29,5 +33,16 @@
             </Button>
         </mah:WindowCommands>
     </mah:MetroWindow.RightWindowCommands>
-    <Grid />
+    <Grid DataContext="{StaticResource ViewModel}">
+        <Border x:Name="PlayArea" Background="Black">
+            <ItemsControl
+                ItemsSource="{Binding Path=Sprites}">
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <Canvas Background="Black" />
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+            </ItemsControl>
+        </Border>
+    </Grid>
 </mah:MetroWindow>

@@ -8,11 +8,11 @@ using System.Windows;
 namespace FlappyPaimon.Model
 {
     /// <summary>
-    /// Represents a gem. Scoring a gem will increase the score by 10.
+    /// Represents a slime. The game will end if the <see cref="Player"/> hits a slime.
     /// </summary>
-    public class Gem : CollidableItem
+    public class Slime : CollidableItem
     {
-        public Gem(Point position, Size size)
+        public Slime(Point position, Size size)
             : base(position, size)
         {
         }

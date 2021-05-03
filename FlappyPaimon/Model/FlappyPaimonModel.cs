@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace FlappyPaimon.Model
 {
-    class FlappyPaimonModel
+    /// <summary>
+    /// Main game logic.
+    /// </summary>
+    public class FlappyPaimonModel
     {
+        public Player Paimon { get; private set; }
     }
 }
