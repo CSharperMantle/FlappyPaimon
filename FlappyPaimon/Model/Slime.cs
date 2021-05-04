@@ -12,8 +12,10 @@ namespace FlappyPaimon.Model
     /// </summary>
     public class Slime : CollidableItem
     {
-        public Slime(Point position, Size size)
-            : base(position, size)
+        public static readonly Size SLIME_SIZE = new Size(82, 44);
+
+        public Slime(Point position)
+            : base(position, SLIME_SIZE)
         {
         }
     }

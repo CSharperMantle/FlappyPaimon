@@ -8,7 +8,7 @@ using System.Windows;
 namespace FlappyPaimon.Model
 {
     /// <summary>
-    /// A <see cref="CollidableItem"/> is an <see cref="Item"/> with a hitbox.
+    /// An <see cref="Item"/> with a hit box and thus supports collision detection.
     /// </summary>
     public abstract class CollidableItem : Item
     {
@@ -20,7 +20,6 @@ namespace FlappyPaimon.Model
         public CollidableItem(Point position, Size size)
             : base(position, size)
         {
-            // No more things to do here. The hit box is computed on-demand.
         }
     }
 }

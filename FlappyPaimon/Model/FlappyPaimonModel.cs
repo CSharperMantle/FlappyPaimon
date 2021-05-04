@@ -12,5 +12,10 @@ namespace FlappyPaimon.Model
     public class FlappyPaimonModel
     {
         public Player Paimon { get; private set; }
+
+        public FlappyPaimonModel()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

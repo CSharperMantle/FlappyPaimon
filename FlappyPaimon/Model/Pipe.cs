@@ -12,10 +12,23 @@ namespace FlappyPaimon.Model
     /// </summary>
     public class Pipe : CollidableItem
     {
-        public Pipe(Point position, Size size)
-            : base(position, size)
+        public static readonly Size PIPE_SIZE = new Size(52, 640);
+
+        public PipeType Type { get; }
+
+        public Pipe(Point position, PipeType pipeType)
+            : base(position, PIPE_SIZE)
         {
-            throw new NotImplementedException();
+            Type = pipeType;
         }
+    }
+
+    /// <summary>
+    /// Types of <see cref="Pipe"/>s.
+    /// </summary>
+    public enum PipeType
+    {
+        Upper,
+        Lower
     }
 }

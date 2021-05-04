@@ -12,8 +12,10 @@ namespace FlappyPaimon.Model
     /// </summary>
     public class Gem : CollidableItem
     {
-        public Gem(Point position, Size size)
-            : base(position, size)
+        public static readonly Size GEM_SIZE = new Size(62, 62);
+
+        public Gem(Point position)
+            : base(position, GEM_SIZE)
         {
         }
     }

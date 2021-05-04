@@ -34,6 +34,8 @@
         </mah:WindowCommands>
     </mah:MetroWindow.RightWindowCommands>
     <Grid DataContext="{StaticResource ViewModel}">
+        <Button Content="Button" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <!--
         <Border x:Name="PlayArea" Background="Black">
             <ItemsControl
                 ItemsSource="{Binding Path=Sprites}">
@@ -44,5 +46,6 @@
                 </ItemsControl.ItemsPanel>
             </ItemsControl>
         </Border>
+        -->
     </Grid>
 </mah:MetroWindow>

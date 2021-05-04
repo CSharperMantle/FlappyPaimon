@@ -8,7 +8,7 @@ using System.Windows;
 namespace FlappyPaimon.Model
 {
     /// <summary>
-    /// An <see cref="Item"/> is a general game element.
+    /// A general game element.
     /// </summary>
     public abstract class Item
     {
@@ -20,8 +20,10 @@ namespace FlappyPaimon.Model
         /// <summary>
         /// Top-left coordination of the <see cref="Item"/>.
         /// </summary>
+        /// <remarks>
         /// The 0 (zero) point of the coordination system is located at the top-left corner,
-        /// with values increasing going down and right, respectively for X- and Y- axis.
+        /// with values increasing going down and right, respectively for X- and Y-axis.
+        /// </remarks>
         public Point Position { get; protected set; }
 
         /// <summary>
@@ -36,12 +38,15 @@ namespace FlappyPaimon.Model
         }
 
         /// <summary>
-        /// Default method to update the current <see cref="Item"/>, to move things left (down to zero).
+        /// Update the current <see cref="Item"/> so as to progress the game. Called periodically by <see cref="FlappyPaimonModel"/>.
         /// </summary>
         /// <param name="deltaX">The span to move (positive goes to left).</param>
+        /// <remarks>
+        /// The default behavior is moving things left (down to zero).
+        /// </remarks>
         public virtual void Update()
         {
-            Position.Offset(ITEM_MOVE_SPEED, 0);
+            Position = new Point(Position.X + ITEM_MOVE_SPEED, Position.Y);
         }
     }
 }
